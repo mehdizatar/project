@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Level3 - PM candidate</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <style>
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+		
+
+        <!-- Video.js build -->
+    <link href="//vjs.zencdn.net/7.4.1/video-js.min.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/7.4.1/video.min.js"></script>
+
+    <!-- Streamroot source handler plugin -->
+    <script src="//cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script>
+
+    <!-- Streamroot Builds -->
+    <script src="//cdn.streamroot.io/videojs-hls-dna-plugin/1/stable/videojs-hls-dna-plugin.js#streamrootKey=1c04d9d9-96d7-4bce-be8b-ab38b319047c"></script>
+        
+    <!-- Streamroot DNA graph -->
+    <script src="//tools.streamroot.io/usage-graphs/stable/graphs.js"></script>
+
+
+
+	</head>
+    <main>
+        <body>
+        <header><h1>Hello Work! - level3</h1></header>
+        <div id="container">
+            <video id="demoplayer" class="video-js" controls width='640' height='264' controls autoplay muted>></video>
+        </div>
+        <div id="streamroot-graphs"></div>  
+        
+        <script>
+            var contentID="level3";
+            function contentIdFn(contentUrl) {
+               return contentID;
+            }
+              var options = {
+                html5: {
+                  hlsjsConfig: {
+                    "maxBufferSize": 0,
+                    "maxBufferLength": 30,
+                    "liveSyncDuration": 30,
+                    "liveMaxLatencyDuration": Infinity
+                  },
+                },
+                dnaConfig: {
+                    "contentIdGenerator" : contentIdFn,
+                },
+              };
+              var player = videojs("demoplayer", options);
+              player.src("http://vod-l3.delivery.streamroot.io/vodOrigin/tos1500.mp4/playlist.m3u8");
+            </script>
+
+            <script src='https://vjs.zencdn.net/7.6.0/video.js'></script>
+        </body>
+    </main>
+</html>
