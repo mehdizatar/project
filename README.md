@@ -1,5 +1,4 @@
 # project
 
 1) Run npm install;
-2) Run node app.js 
-3) connect to http://localhost:8080/
+2)Server runs on 8080 by default, to run on a different port: `PORT=XXXX node app.js
