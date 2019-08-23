@@ -1,16 +1,25 @@
 {
-  "name": "streamroot",
+  "name": "pm-test",
   "version": "1.0.0",
-  "description": "",
+  "description": "Npm install & Run app.js & connect to http://localhost:8080/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "author": "",
+  "author": "mehdi_z",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.2",
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehdizatar/project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mehdizatar/project/issues"
+  },
+  "homepage": "https://github.com/mehdizatar/project#readme"
 }
